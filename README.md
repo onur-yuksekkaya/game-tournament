@@ -1,4 +1,4 @@
-# [Live Demo ()=>](https://tournament-game-onuryks.netlify.app)
+# [Live Demo ()=>](https://game-tournament-onuryks.netlify.app/)
 
 
 <h3 align="left">Languages and Tools:</h3>
