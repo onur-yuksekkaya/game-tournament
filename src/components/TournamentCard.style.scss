@@ -1,0 +1,48 @@
+@import '../styles/variables';
+
+.tournament-card {
+  width: 50rem;
+  height: 45rem;
+  background-color: $color-gray;
+  position: relative;
+  transition-duration: 0.5s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    & button:last-child {
+      opacity: 1;
+    }
+  }
+  & &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 27rem;
+    }
+  }
+
+  &__content {
+    padding: 1rem 2rem 2rem 2rem;
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+      span {
+        font-weight: 600;
+        margin-right: 0.7rem;
+      }
+    }
+    &__buttons {
+      display: flex;
+      margin: 1rem 0;
+      & button:last-child {
+        margin-left: auto;
+        opacity: 0;
+        transition-duration: 0.5s;
+      }
+    }
+  }
+}

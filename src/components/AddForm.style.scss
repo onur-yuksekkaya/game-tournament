@@ -1,0 +1,29 @@
+@import '../styles/variables';
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  gap: 3rem;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    input {
+      height: 5rem;
+      border: 1px solid $color-black;
+      padding-left: 1rem;
+    }
+    p {
+      height: 2rem;
+      color: $color-red;
+    }
+  }
+  button {
+    margin-left: auto;
+  }
+}

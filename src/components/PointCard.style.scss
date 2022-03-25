@@ -1,0 +1,25 @@
+@import '../styles/variables';
+
+.point-card {
+  width: 7rem;
+  height: 7rem;
+  background-color: $color-turq;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+
+  &__point {
+    font-size: 3em;
+    font-weight: 700;
+    padding-left: 2.5rem;
+  }
+  &__text {
+    text-transform: uppercase;
+    padding-left: 1.5rem;
+    font-size: 1.2em;
+  }
+}

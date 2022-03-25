@@ -1,0 +1,25 @@
+@import "./variables";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  //TODO
+  //RESPONSIVE
+  @media screen and (max-width: 800px) {
+    font-size: 8px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 6px;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}

@@ -1,0 +1,137 @@
+@import '../styles/typhography';
+@import '../styles/variables';
+
+@mixin button-small {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+@mixin button--large {
+  width: 20rem;
+  height: 6rem;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+@mixin button-icon {
+  position: absolute;
+  background-size: cover;
+  background-repeat: none;
+  content: '';
+}
+
+.button {
+  border: none;
+  font-family: $font-main;
+  background-color: transparent;
+  cursor: pointer;
+
+  position: relative;
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &--down {
+    @include button-small;
+    border: 1px solid $color-turq;
+    color: $color-turq;
+    &::before {
+      @include button-icon;
+      left: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url('../assets/icons/chevron-compact-down.svg');
+      filter: invert(64%) sepia(95%) saturate(590%) hue-rotate(149deg)
+        brightness(95%) contrast(91%);
+    }
+  }
+  &--up {
+    @include button-small;
+    border: 1px solid $color-turq;
+    background-color: $color-turq;
+    color: $color-white;
+    &::before {
+      @include button-icon;
+      left: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url('../assets/icons/chevron-compact-up.svg');
+      filter: invert(100%) sepia(0%) saturate(4217%) hue-rotate(288deg)
+        brightness(112%) contrast(100%);
+    }
+  }
+  &--delete {
+    @include button-small;
+    border: 1px solid $color-red;
+    background-color: $color-red;
+    color: $color-white;
+  }
+
+  &--addnom {
+    @include button--large;
+    background-color: $color-turq;
+    color: $color-white;
+    &::before {
+      @include button-icon;
+      left: 0.7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      background-image: url('../assets/icons/plus.svg');
+      filter: invert(100%) sepia(0%) saturate(4217%) hue-rotate(288deg)
+        brightness(112%) contrast(100%);
+    }
+  }
+  &--sortby {
+    @include button--large;
+    background-color: $color-gray;
+    color: $color-black;
+    &::before {
+      @include button-icon;
+      left: 1.7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      background-image: url('../assets/icons/sort-up.svg');
+    }
+  }
+  &--goback {
+    @include button--large;
+    background-color: $color-gray;
+    color: $color-black;
+    &::before {
+      @include button-icon;
+      left: 1.7rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      background-image: url('../assets/icons/chevron-compact-left.svg');
+    }
+  }
+
+  &--submit {
+    @include button--large;
+    background-color: $color-green;
+  }
+  &--page {
+    width: 3rem;
+    height: 3rem;
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  &--page-selected {
+    width: 3rem;
+    height: 3rem;
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: $color-gray-dark;
+    color: $color-white;
+  }
+}

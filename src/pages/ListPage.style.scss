@@ -1,0 +1,19 @@
+.list-page {
+  &__heading {
+    font-size: 3.7rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  &__tournaments {
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 5rem;
+    column-gap: 5rem;
+  }
+  &__page-buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
