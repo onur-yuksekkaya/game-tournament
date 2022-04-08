@@ -38,7 +38,7 @@ function TournamentProvider({ children }) {
     tournamentImageUrl,
   }) => {
     const newTournament = {
-      id: lastId + 1,
+      id: Math.random(),
       name: tournamentName,
       winner: tournamentWinner,
       imageUrl: tournamentImageUrl,

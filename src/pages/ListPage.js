@@ -51,8 +51,6 @@ const ListPage = () => {
 
   const totalPages = Math.ceil(tournaments.length / pageCount);
 
-  console.log('totalPages', totalPages);
-
   return (
     <PageLayout>
       <PageHeader>
@@ -82,21 +80,7 @@ const ListPage = () => {
               page,
               pageCount,
             }).map((tournament) => (
-              <TournamentCard
-                key={tournament.id}
-                img={tournament.imageUrl}
-                title={tournament.name}
-                winner={tournament.winner}
-                date={tournament.voteUpdateDate}
-                points={tournament.points}
-                id={tournament.id}
-                upPoint={upPoint}
-                downPoint={downPoint}
-                updatePoint={() => {
-                  console.log('Vote');
-                }}
-                deleteTournament={deleteTournament}
-              />
+              <TournamentCard key={tournament.id} {...tournament} />
             ))}
         </div>
         <div className="list-page__page-buttons">

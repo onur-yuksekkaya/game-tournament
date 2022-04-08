@@ -6,20 +6,11 @@ import Button from './Button';
 import PointCard from './PointCard';
 
 import './TournamentCard.style.scss';
+import { useTournaments } from '../context/TournamentContext';
 
-const TournamentCard = ({
-  title,
-  winner,
-  date,
-  img,
-  points,
-  id,
-  upPoint,
-  downPoint,
-  deleteTournament,
-}) => {
+const TournamentCard = ({ title, winner, date, imageUrl, points, id }) => {
   const { confirmAlert, successAlert } = useSweetAlert();
-
+  const { deleteTournament, upPoint, downPoint } = useTournaments();
   async function handleDelete(tournamentId) {
     const confirmRemove = await confirmAlert(
       `Do you want to remove ${title} from nominee?`,
@@ -36,7 +27,7 @@ const TournamentCard = ({
     <div className="tournament-card">
       <PointCard point={points} />
       <div className="tournament-card__image">
-        <img src={img} alt="" />
+        <img src={imageUrl} alt="" />
       </div>
       <div className="tournament-card__content">
         <div className="tournament-card__content__title">{title}</div>
